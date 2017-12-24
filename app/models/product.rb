@@ -4,8 +4,7 @@ class Product < ApplicationRecord
     validates :price, numericality: {greater_than_or_equal_to: 0.01}
     
     validates :title, uniqueness: true
-    validates_length_of :title, 
-    :length => {
+    validates :title, length: {
         :minimum => 10, 
         :too_short => "is too short and must contain 10 characters"
     }
