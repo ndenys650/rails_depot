@@ -21,6 +21,7 @@
         <li><a href="http://www..../contact">Contact</a></li>
         <br/>
         <li><a><%= Time.now.strftime('%I:%M %p') %></a></li>
+        <li><a><%= pluralize session[:counter], 'time' %></a></li>
       </ul> 
     </div>
     <div id="main"> <%= yield %>
